@@ -10,13 +10,13 @@ import { Subscription } from 'rxjs';
 })
 export class PodComponent implements OnInit {
 
-  items = new Array<any>();
+  item: any;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.http.get('http://api.nasa.gov/planetary/apod?api_key=NB5VcgTbxAKiXcbjaMH4vaoepqSzMeKtBHlnbdZZ')
-    .subscribe((value: Array<any>) => this.items = value);
+    .subscribe(value => this.item = value);
   }
 
 }
