@@ -1,2 +1,9 @@
-<p>Combien D'asteroïdes sont proche de la terre aujourd'hui ?</p>
-Réponse: {{ items.element_count }}
+<p>Quelles asteroïdes sont proche de la terre aujourd'hui ?</p>
+<div *ngIf="items.length >= 0">
+  <div *ngFor="let item of items">
+    <h3>NEO's :</h3>
+  <div>Nom: {{ items.name }}</div>
+  <div>Prénom: {{ items.size }}</div>
+  <div>Email: {{ items.distance }}</div>
+  </div>
+</div>
