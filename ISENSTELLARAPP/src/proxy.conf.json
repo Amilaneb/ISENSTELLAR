@@ -1,6 +1,6 @@
 {
   "/api/*": {
-      "target": "http://api.nasa.gov",
+      "target": "",
       "secure": false,
       "logLevel": "debug",
       "changeOrigin": true

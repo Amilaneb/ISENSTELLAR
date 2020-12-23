@@ -1,3 +1,5 @@
-<app-header></app-header>
-<app-body></app-body>
-<app-footer></app-footer>
+<nav>
+  <a [routerLink]="['/pod']" routerLinkActive="router-link-active">POD</a> <br>
+  <a [routerLink]="['/neo']" routerLinkActive="router-link-active">NEO</a>
+</nav>
+<router-outlet></router-outlet>

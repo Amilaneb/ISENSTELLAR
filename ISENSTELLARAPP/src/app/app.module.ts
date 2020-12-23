@@ -2,23 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
-import { PodComponent } from './pod/pod.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
     BodyComponent,
-    PodComponent
+    routingComponents
+
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
