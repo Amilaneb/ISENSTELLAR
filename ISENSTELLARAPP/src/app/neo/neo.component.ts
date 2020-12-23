@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NeoService } from '../service/neo.service';
+import { DatePipe } from '@angular/common';
 
 
 @Component({
@@ -9,14 +10,19 @@ import { NeoService } from '../service/neo.service';
 })
 export class NeoComponent implements OnInit {
 
-  item: any;
+  items: any;
 
   today: Object;
+  date = new Date();
+  myDate: string
 
-  constructor(private neo: NeoService) { }
+  constructor(private neo: NeoService, private dp: DatePipe) {
+    this.myDate = this.dp.transform(this.date, 'yyyy-MM-dd')
+   }
 
   ngOnInit(): void {
-   this.today = this.neo.getasteroid().subscribe(value => console.log(value));
+  this.neo.getasteroid().subscribe(value => this.items = value);
 
   }
 }
+//console.log(this.dp.transform(this.date, 'yyyy-MM-DD'))
