@@ -5,6 +5,6 @@ Le visuel du projet utilise material même s'il ne reflète pas l'aspect origina
 
 Problèmes rencontrés : 
 - 80% du temps consacré a essyayer d'integrer le composant NEO en vain.
-- Impossible de recuperer le tableau de données des neo a cause de sa structure d'indexes.
+- Impossible de recuperer le tableau de données des neo a cause de sa structure d'indexes qui contien la date(string) mais impossible d'acceder.
 
 Cependant ce projet nous a permis de mieux comprendre la puissance de l'angular dans le domain de la création d'appli-web
